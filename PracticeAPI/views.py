@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view
 from Student.models import StudentClass
 from Student.serializers import StudentSerializer
 from rest_framework.views import APIView
+from django.http import HttpResponse
 
 @api_view(['GET'])
 def checkdata(req):
@@ -73,6 +74,9 @@ class student(APIView):   #API view
         query = StudentClass.objects.get(id = req.data['id'])
         query.delete()
         return Response({'status':200})
+    
+def checkUpdate(req):
+    return HttpResponse("ok")
     
 
 

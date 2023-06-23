@@ -23,5 +23,7 @@ urlpatterns = [
     path('data/',views.allStudentData),
     # path('adddata/',views.StudentPost),
     path('data/<uid>',views.getAData),
-    path('student/',views.student.as_view())
+    path('student/',views.student.as_view()),
+    path('allcheck/',views.checkUpdate),
+
 ]
