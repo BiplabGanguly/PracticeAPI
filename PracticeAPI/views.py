@@ -77,6 +77,9 @@ class student(APIView):   #API view
     
 def checkUpdate(req):
     return HttpResponse("ok")
+
+def addlist(req):
+    return HttpResponse("list")
     
 
 
